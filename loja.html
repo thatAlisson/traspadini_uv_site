@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traspadini UV | Loja Oficial</title>
+    <link rel="icon" type="image/svg+xml" href="assets/TUV.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar glass">
+        <div class="nav-container">
+            <a href="loja.html" class="logo">
+            <img src="assets/TUV.svg" alt="Traspadini UV" class="logo-img">
+            <span class="logo-text">TRASPADINI <span class="highlight">UV</span></span>
+            </a>
+            
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="loja.html" class="nav-main-link active"><i class="fa-solid fa-bag-shopping"></i> Loja <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-category="all" class="sub-link active">Todos os Produtos</a></li>
+                        <li><a href="#" data-category="camisas" class="sub-link">Camisas</a></li>
+                        <li><a href="#" data-category="calcas" class="sub-link">Calças</a></li>
+                        <li><a href="#" data-category="perfume" class="sub-link">Perfume</a></li>
+                        <li><a href="#" data-category="carteiras" class="sub-link">Carteiras</a></li>
+                        <li><a href="#" data-category="bones" class="sub-link">Bonés</a></li>
+                    </ul>
+                </li>
+                <li><a href="personalizacao.html" class="nav-main-link highlight-link"><i class="fa-solid fa-shirt"></i> Uniformes Personalizados</a></li>
+            </ul>
+
+            <div class="nav-right-actions">
+                <a href="carrinho.html" class="cart-icon" title="Ver Carrinho">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="fade-up">Alta Performance &<br>Estilo Exclusivo</h1>
+            <p class="fade-up delay-1">Coleção completa de moda UV, acessórios e vestuário de alta durabilidade.</p>
+            <div class="hero-buttons fade-up delay-2">
+                <a href="#shop" class="btn-primary">Ver Produtos</a>
+                <a href="personalizacao.html" class="btn-secondary"><i class="fa-solid fa-wand-magic-sparkles"></i> Monte seu Uniforme</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Vitrine de Produtos -->
+    <main class="shop-container" id="shop">
+        <div class="section-title fade-up">
+            <div>
+                <span class="subtitle">Catálogo Oficial</span>
+                <h2 id="category-title">Nossos Produtos</h2>
+            </div>
+            <div class="filters-mobile">
+                <select id="mobile-category-select">
+                    <option value="all">Todos os Produtos</option>
+                    <option value="camisas">Camisas</option>
+                    <option value="calcas">Calças</option>
+                    <option value="perfume">Perfume</option>
+                    <option value="carteiras">Carteiras</option>
+                    <option value="bones">Bonés</option>
+                </select>
+            </div>
+        </div>
+        <div class="products-grid" id="products-grid">
+            <!-- Produtos renderizados via JS -->
+        </div>
+    </main>
+
+    <!-- Rodapé de Contatos -->
+    <section class="footer-contacts">
+        <h3>Fale Conosco & Siga Nossas Redes</h3>
+        <div class="contact-buttons-row">
+            <a href="https://wa.me/5527998707382" target="_blank" class="contact-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://instagram.com/traspadiniuv" target="_blank" class="contact-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="mailto:traspadiniuv@gmail.com.br" class="contact-btn email"><i class="fa-solid fa-envelope"></i> E-mail</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traspadini UV. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="toast" id="toast">Item adicionado ao carrinho!</div>
+
+    <script src="js/cart.js"></script>
+    <script src="js/loja.js"></script>
+    <!-- Modal de Detalhes do Produto -->
+<div id="product-modal" class="modal-overlay hidden">
+    <div class="modal-card glass-card">
+        <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-body" id="modal-content">
+            <!-- Conteúdo carregado via JS -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

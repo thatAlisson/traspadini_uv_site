@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traspadini UV | Detalhes do Produto</title>
+    <link rel="icon" type="image/svg+xml" href="assets/TUV.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar igual às outras páginas -->
+    <header class="navbar glass">
+        <div class="nav-container">
+            <a href="loja.html" class="logo">
+                <img src="assets/TUV.svg" alt="Traspadini UV" class="logo-img">
+                <span class="logo-text">TRASPADINI <span class="highlight">UV</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="loja.html" class="nav-main-link"><i class="fa-solid fa-bag-shopping"></i> Voltar à Loja</a></li>
+            </ul>
+            <div class="nav-right-actions">
+                <a href="carrinho.html" class="cart-icon" title="Ver Carrinho">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Detalhado do Produto -->
+    <main class="page-container" style="margin-top: 100px;">
+        <div class="product-detail-layout glass-card fade-up" id="product-detail-container">
+            <!-- Preenchido via JavaScript -->
+        </div>
+    </main>
+
+    <footer class="footer mt-5">
+        <p>&copy; 2026 Traspadini UV. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="toast" id="toast">Item adicionado ao carrinho!</div>
+
+    <script src="js/cart.js"></script>
+    <script src="js/produto-detalhe.js"></script>
+</body>
+</html>

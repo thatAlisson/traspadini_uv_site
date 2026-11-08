@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traspadini UV | Checkout & Pagamento</title>
+    <link rel="icon" type="image/svg+xml" href="assets/TUV.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar glass">
+        <div class="nav-container">
+            <a href="loja.html" class="logo">
+                <img src="assets/TUV.svg" alt="Traspadini UV" class="logo-img">
+                <span class="logo-text">TRASPADINI <span class="highlight">UV</span></span> 
+            </a>
+            <div class="checkout-secure-badge">
+                <i class="fa-solid fa-shield-halved"></i> Ambiente 100% Seguro
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="section-title fade-up text-center">
+            <div>
+                <span class="subtitle">Finalização</span>
+                <h2>Dados de Entrega e Pagamento</h2>
+            </div>
+        </div>
+
+        <div class="checkout-layout fade-up">
+            <form id="checkout-form" class="glass-card">
+                <h3>1. Dados do Destinatário</h3>
+                <div class="input-group">
+                    <label>Nome Completo *</label>
+                    <input type="text" id="pay-name" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>E-mail *</label>
+                        <input type="email" id="pay-email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Celular / WhatsApp *</label>
+                        <input type="text" id="pay-phone" placeholder="(27) 99999-9999" required>
+                    </div>
+                </div>
+
+                <h3 class="mt-4">2. Endereço de Entrega</h3>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>CEP *</label>
+                        <input type="text" id="pay-cep" placeholder="29140-000" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Cidade / UF *</label>
+                        <input type="text" id="pay-city" placeholder="Cariacica / ES" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Endereço Completo (Rua, Número, Bairro, Comp.) *</label>
+                    <input type="text" id="pay-address" placeholder="Rua Exemplo, nº 123" required>
+                </div>
+
+                <h3 class="mt-4">3. Forma de Pagamento</h3>
+                <div class="payment-methods">
+                    <label class="pay-method selected">
+                        <input type="radio" name="payment-type" value="pix" checked>
+                        <i class="fa-brands fa-pix"></i> PIX (Aprovação Instantânea)
+                    </label>
+                    <label class="pay-method">
+                        <input type="radio" name="payment-type" value="card">
+                        <i class="fa-solid fa-credit-card"></i> Cartão de Crédito
+                    </label>
+                </div>
+
+                <div class="checkout-summary mt-4">
+                    <p>Total a pagar: <strong id="checkout-total-val">R$ 0,00</strong></p>
+                </div>
+
+                <button type="submit" class="btn-primary w-100 mt-3">
+                    Concluir e Pagar Agora <i class="fa-solid fa-lock"></i>
+                </button>
+            </form>
+
+            <div class="payment-status-container hidden glass-card text-center" id="payment-status">
+                <div class="spinner" id="pay-spinner"></div>
+                <div id="status-content">
+                    <h3>Processando Pagamento...</h3>
+                    <p>Conectando ao gateway de pagamento seguro.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-5">
+        <p>&copy; 2026 Traspadini UV. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/pagamento.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traspadini UV | Meu Carrinho</title>
+    <link rel="icon" type="image/svg+xml" href="assets/TUV.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar glass">
+        <div class="nav-container">
+            <a href="loja.html" class="logo">
+                <img src="assets/TUV.svg" alt="Traspadini UV" class="logo-img">
+                <span class="logo-text">TRASPADINI <span class="highlight">UV</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="loja.html" class="nav-main-link"><i class="fa-solid fa-bag-shopping"></i> Continuar Comprando</a></li>
+                <li><a href="personalizacao.html" class="nav-main-link highlight-link"><i class="fa-solid fa-shirt"></i> Uniformes Personalizados</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="section-title fade-up">
+            <div>
+                <span class="subtitle">Resumo de Compras</span>
+                <h2>Seu Carrinho</h2>
+            </div>
+        </div>
+
+        <div class="cart-page-layout fade-up">
+            <div class="cart-items-list" id="cart-items-container">
+                <!-- Itens carregados via JS -->
+            </div>
+
+            <div class="cart-summary-card glass-card">
+                <h3>Resumo do Pedido</h3>
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">R$ 0,00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Frete:</span>
+                    <span class="text-success">Grátis</span>
+                </div>
+                <hr class="divider">
+                <div class="summary-line total">
+                    <span>Total:</span>
+                    <span id="cart-total">R$ 0,00</span>
+                </div>
+
+                <a href="pagamento.html" id="btn-proceed-payment" class="btn-primary w-100 mt-4 text-center block">
+                    Ir para o Pagamento <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="loja.html" class="btn-secondary w-100 mt-2 text-center block">Continuar Comprando</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="footer-contacts">
+        <h3>Canais de Atendimento</h3>
+        <div class="contact-buttons-row">
+            <a href="https://wa.me/5527999999999" target="_blank" class="contact-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://instagram.com/traspadiniuv" target="_blank" class="contact-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="mailto:contato@traspadiniuv.com.br" class="contact-btn email"><i class="fa-solid fa-envelope"></i> E-mail</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traspadini UV. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/carrinho-page.js"></script>
+</body>
+</html>

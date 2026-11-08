@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traspadini UV | Personalização de Uniformes</title>
+    <link rel="icon" type="image/svg+xml" href="assets/TUV.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar glass">
+        <div class="nav-container">
+            <a href="loja.html" class="logo">
+                <img src="assets/TUV.svg" alt="Traspadini UV" class="logo-img">
+                <span class="logo-text">TRASPADINI <span class="highlight">UV</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="loja.html" class="nav-main-link"><i class="fa-solid fa-bag-shopping"></i> Compras / Loja</a></li>
+                <li><a href="personalizacao.html" class="nav-main-link highlight-link active"><i class="fa-solid fa-shirt"></i> Personalização de Uniformes</a></li>
+            </ul>
+            <div class="nav-right-actions">
+                <a href="carrinho.html" class="cart-icon" title="Ver Carrinho">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="customization-section">
+        <div class="custom-container">
+            <div class="section-title text-center fade-up">
+                <span class="subtitle">Setor Corporativo</span>
+                <h2>Monte seu Pedido de Uniformes</h2>
+                <p>Configure modelos, cores, tamanhos e técnicas de aplicação para cada item do seu pedido.</p>
+            </div>
+
+            <div class="custom-grid">
+                <form id="custom-form" class="glass-card fade-up">
+                    <h3>1. Dados de Contato</h3>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Nome Completo / Empresa *</label>
+                            <input type="text" id="cust-name" placeholder="Nome ou Razão Social" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Telefone / WhatsApp *</label>
+                            <input type="text" id="cust-phone" placeholder="(27) 99999-9999" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail Corporativo *</label>
+                        <input type="email" id="cust-email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <h3 class="mt-4">2. Configurar & Adicionar Item</h3>
+                    <div class="add-item-box">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Modelo</label>
+                                <select id="item-model">
+                                    <option value="Camisa PV Gola Careca">Camisa PV Gola Careca</option>
+                                    <option value="Camisa PV Polo">Camisa PV Polo</option>
+                                    <option value="Camisa UV Protection Manga Longa">Camisa UV Protection Manga Longa</option>
+                                    <option value="Calça em Brim Profissional">Calça em Brim Profissional</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Cor do Tecido</label>
+                                <select id="item-color">
+                                    <option value="Preto">Preto</option>
+                                    <option value="Branco">Branco</option>
+                                    <option value="Azul Marinho">Azul Marinho</option>
+                                    <option value="Cinza Chumbo">Cinza Chumbo</option>
+                                    <option value="Vermelho">Vermelho</option>
+                                    <option value="Verde Militar">Verde Militar</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Método de Aplicação</label>
+                            <select id="item-method">
+                                <option value="Silk Screen">Silk Screen</option>
+                                <option value="Bordado Computadorizado">Bordado Computadorizado</option>
+                                <option value="Sem Personalização (Liso)">Sem Personalização (Liso)</option>
+                            </select>
+                        </div>
+
+                        <label class="mb-2 block font-medium">Distribuição por Tamanho (Quantidade):</label>
+                        <div class="sizes-grid">
+                            <div><label>P</label><input type="number" min="0" value="0" class="size-qty" data-size="P"></div>
+                            <div><label>M</label><input type="number" min="0" value="0" class="size-qty" data-size="M"></div>
+                            <div><label>G</label><input type="number" min="0" value="0" class="size-qty" data-size="G"></div>
+                            <div><label>GG</label><input type="number" min="0" value="0" class="size-qty" data-size="GG"></div>
+                            <div><label>XG</label><input type="number" min="0" value="0" class="size-qty" data-size="XG"></div>
+                        </div>
+
+                        <button type="button" id="btn-add-item-list" class="btn-secondary w-100 mt-3">
+                            <i class="fa-solid fa-plus"></i> Adicionar ao Pedido
+                        </button>
+                    </div>
+
+                    <h3 class="mt-4">3. Resumo dos Itens Adicionados</h3>
+                    <div id="items-summary-list" class="summary-list-box">
+                        <p class="empty-list-text">Nenhum item adicionado ainda.</p>
+                    </div>
+
+                    <h3 class="mt-4">4. Envio da Logo (Apenas formato .SVG)</h3>
+                    <div class="file-upload-box">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <p id="file-label">Arraste seu arquivo .SVG aqui ou clique para selecionar</p>
+                        <input type="file" id="logo-file" accept=".svg">
+                    </div>
+
+                    <button type="submit" class="btn-primary w-100 mt-4">
+                        <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento via WhatsApp
+                    </button>
+                </form>
+
+                <div class="custom-info-side fade-up delay-1">
+                    <div class="glass-card">
+                        <h3><i class="fa-solid fa-ruler-combined"></i> Tabela de Medidas (cm)</h3>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr><th>Tamanho</th><th>Largura</th><th>Altura</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>P</td><td>50 cm</td><td>68 cm</td></tr>
+                                    <tr><td>M</td><td>52 cm</td><td>70 cm</td></tr>
+                                    <tr><td>G</td><td>54 cm</td><td>72 cm</td></tr>
+                                    <tr><td>GG</td><td>56 cm</td><td>74 cm</td></tr>
+                                    <tr><td>XG</td><td>60 cm</td><td>78 cm</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="glass-card mt-4 info-highlight">
+                        <h3><i class="fa-solid fa-circle-info"></i> Diretrizes de Pedido</h3>
+                        <ul class="rules-list">
+                            <li><i class="fa-solid fa-check"></i> Pedido mínimo de 10 unidades para camisas (PV ou UV).</li>
+                            <li><i class="fa-solid fa-check"></i> Calças em Brim podem ser unitárias.</li>
+                            <li><i class="fa-solid fa-check"></i> Envie a logo exclusivamente em <strong>SVG</strong> para garantirmos a qualidade vetorial.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-contacts">
+        <h3>Entre em Contato Conosco</h3>
+        <div class="contact-buttons-row">
+            <a href="https://wa.me/5527999999999" target="_blank" class="contact-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://instagram.com/traspadiniuv" target="_blank" class="contact-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="mailto:contato@traspadiniuv.com.br" class="contact-btn email"><i class="fa-solid fa-envelope"></i> E-mail</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traspadini UV. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/personalizacao.js"></script>
+</body>
+</html>
