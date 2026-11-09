@@ -1,6 +1,6 @@
 # ☀️ Traspadini UV - Projeto de E-Commerce & Catálogo de Moda UV
 
-[![Acessar o Site](https://img.shields.io/badge/🚀_Acessar_o_Site-Clique_Aqui-orange?style=for-the-badge)](https://thatalisson.github.io/traspadini_uv_site/loja.html)
+[![Acessar o Site](https://img.shields.io/badge/🚀_Acessar_o_Site-Clique_Aqui-orange?style=for-the-badge)](https://thatalisson.github.io/traspadini_uv_site/index.html)
 
 Esse é o projeto piloto de um site moderno e responsivo para a loja em que trabalho: a **Traspadini UV**, especializada em vestuário de alta performance, proteção UV, uniformes personalizados e acessórios de alta durabilidade.
 
