@@ -576,8 +576,7 @@ input:focus, select:focus { border-color: var(--primary); }
         height: auto;
     }
 
-    /* Container do Vídeo de Fundo */
-/* Container fixo do vídeo no fundo da tela inteira */
+    /* 1. Vídeo e camada de vidro fosco travados no fundo da tela inteira */
 .video-bg-container {
     position: fixed;
     inset: 0;
@@ -588,7 +587,6 @@ input:focus, select:focus { border-color: var(--primary); }
     pointer-events: none;
 }
 
-/* Centraliza e cobre toda a tela com o vídeo */
 .video-bg {
     position: absolute;
     top: 50%;
@@ -601,13 +599,42 @@ input:focus, select:focus { border-color: var(--primary); }
     object-fit: cover;
 }
 
-/* Camada de vidro fosco: escurece e retira a nitidez do vídeo */
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(10, 12, 16, 0.55); /* Tom escuro translúcido */
-    backdrop-filter: blur(10px);        /* Cria o efeito de vidro fosco/sem nitidez */
-    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari/iOS */
+    background: rgba(10, 12, 16, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* 2. Remove o fundo/overlay antigo da Hero e centraliza o texto sobre o vídeo */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: transparent !important;
+    padding: 80px 20px 0;
+    margin: 0;
+}
+
+.hero-overlay {
+    display: none !important; /* Desativa a camada antiga que tampava o vídeo */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+/* 3. Garante que a vitrine deslize por cima do vídeo fixo ao rolar */
+.shop-container, .footer-contacts, .footer {
+    position: relative;
+    z-index: 2;
 }
     
 }
