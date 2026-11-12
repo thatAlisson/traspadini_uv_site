@@ -69,7 +69,7 @@ const PRODUCTS = [
         name: "Carteira em Couro Legítimo",
         price: 99.90,
         category: "carteiras",
-        img: "assets/carteira couro.jpeg",
+        img: "assets/carteira couro.png",
         desc: "Carteira em couro legítimo, compacta e prática para carregar seus itens essenciais."
     },
     {
