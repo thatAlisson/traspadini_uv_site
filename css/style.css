@@ -1,4 +1,10 @@
 /* Fundo fixo da loja para as páginas internas, com efeito de vidro escuro. */
+body {
+    position: relative;
+    isolation: isolate;
+    background-color: #0a0a0d;
+}
+
 body.store-photo-background::before,
 body.store-photo-background::after {
     content: "";
@@ -8,15 +14,20 @@ body.store-photo-background::after {
 }
 
 body.store-photo-background::before {
-    z-index: 0;
+    z-index: -2;
     background: url("../assets/visao loja.jpeg") center center / cover no-repeat;
+    transform: scale(1.05);
     filter: blur(4px) brightness(0.72);
-    transform: scale(1.04);
 }
 
 body.store-photo-background::after {
-    z-index: 1;
-    background: rgba(8, 10, 14, 0.38);
+    z-index: -1;
+    background: rgba(8, 10, 14, 0.44);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
 }
