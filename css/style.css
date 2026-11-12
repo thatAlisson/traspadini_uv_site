@@ -28,6 +28,37 @@ html, body {
     width: 100%;
 }
 
+/* Fundo fixo exclusivo da página de detalhes do produto. */
+.product-page {
+    isolation: isolate;
+}
+
+.product-page::before,
+.product-page::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.product-page::before {
+    z-index: -2;
+    background: url("../assets/visao loja.jpeg") center / cover no-repeat;
+}
+
+.product-page::after {
+    z-index: -1;
+    background: rgba(8, 10, 14, 0.68);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.product-page .product-detail-layout {
+    background: rgba(20, 20, 25, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
 .video-bg-container {
     position: fixed;
     inset: 0;
