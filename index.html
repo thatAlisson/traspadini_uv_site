@@ -11,8 +11,10 @@
 </head>
 <body>
     <div class="video-bg-container">
-        <video autoplay muted loop playsinline class="video-bg">
+        <!-- Otimização: Adicionado preload="metadata" para carregar leve e fluido -->
+        <video autoplay muted loop playsinline preload="metadata" class="video-bg">
             <source src="assets/video%20fundo.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos em HTML5.
         </video>
         <div class="video-overlay"></div>
     </div>
