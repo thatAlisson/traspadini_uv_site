@@ -530,31 +530,35 @@ input:focus, select:focus { border-color: var(--primary); }
     }
 
     /* Container do Vídeo de Fundo */
+/* Trava o container na janela inteira */
 .video-bg-container {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0; /* Equivalente a top: 0; right: 0; bottom: 0; left: 0; */
     width: 100vw;
     height: 100vh;
-    z-index: -1; /* Joga o vídeo para trás de todo o conteúdo */
+    z-index: -1;
     overflow: hidden;
+    pointer-events: none; /* Garante que o vídeo não bloqueie cliques nos botões */
 }
 
-/* Vídeo preenchendo toda a tela sem distorcer */
+/* Faz o vídeo preencher toda a proporção da tela sem bordas pretas */
 .video-bg {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
     object-fit: cover;
 }
 
-/* Camada escura translúcida para dar leitura aos textos */
+/* Camada escura fixa sobre o vídeo */
 .video-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 12, 16, 0.72); /* Ajuste o 0.72 entre 0.4 e 0.85 conforme a claridade do vídeo */
+    inset: 0;
+    background: rgba(10, 12, 16, 0.72);
 }
     
 }
