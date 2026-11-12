@@ -530,18 +530,18 @@ input:focus, select:focus { border-color: var(--primary); }
     }
 
     /* Container do Vídeo de Fundo */
-/* Trava o container na janela inteira */
+/* Container fixo do vídeo no fundo da tela inteira */
 .video-bg-container {
     position: fixed;
-    inset: 0; /* Equivalente a top: 0; right: 0; bottom: 0; left: 0; */
+    inset: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1;
     overflow: hidden;
-    pointer-events: none; /* Garante que o vídeo não bloqueie cliques nos botões */
+    pointer-events: none;
 }
 
-/* Faz o vídeo preencher toda a proporção da tela sem bordas pretas */
+/* Centraliza e cobre toda a tela com o vídeo */
 .video-bg {
     position: absolute;
     top: 50%;
@@ -554,11 +554,13 @@ input:focus, select:focus { border-color: var(--primary); }
     object-fit: cover;
 }
 
-/* Camada escura fixa sobre o vídeo */
+/* Camada de vidro fosco: escurece e retira a nitidez do vídeo */
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(10, 12, 16, 0.72);
+    background: rgba(10, 12, 16, 0.55); /* Tom escuro translúcido */
+    backdrop-filter: blur(10px);        /* Cria o efeito de vidro fosco/sem nitidez */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari/iOS */
 }
     
 }
