@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('product-detail-container');
 
     if (!product) {
-        container.innerHTML = '<h2>Produto não encontrado</h2><p><a href="loja.html" class="btn-primary mt-3">Voltar à Loja</a></p>';
+        container.innerHTML = '<h2>Produto não encontrado</h2><p><a href="index.html" class="btn-primary mt-3">Voltar à Loja</a></p>';
         return;
     }
 
