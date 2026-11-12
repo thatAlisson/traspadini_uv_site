@@ -150,6 +150,53 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; /* Deixa a imagem fixa na tela durante a rolagem */
 }
+/* Garante que o container principal da página abra espaço por cima do vídeo */
+.hero, .hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: transparent !important; /* Remove qualquer fundo sólido que tampe o vídeo */
+    z-index: 1; /* Mantém os textos acima do vídeo e da camada de vidro */
+    padding-top: 80px; /* Compensa a altura do menu fixo */
+}
+
+/* Container fixo do vídeo e do vidro fosco no fundo da tela inteira */
+.video-bg-container {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Vídeo cobrindo toda a tela sem distorcer */
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Camada de vidro fosco com desfoque */
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 12, 16, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
 .hero-content { position: relative; z-index: 2; padding: 2rem; max-width: 800px; }
 .hero-content h1 {
     font-size: 3.2rem;
