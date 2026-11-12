@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `
                 <div class="product-img" style="cursor: pointer;" onclick="verDetalhes(${product.id})">
                     <span class="product-badge">Disponível</span>
-                    <img src="${product.img}" alt="${product.name}" onerror="this.src='https://placehold.co/400x400/1e293b/FFF?text=TRASPADINI'">
+                    <img src="${product.img}" alt="${product.name}" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x400/1e293b/FFF?text=TRASPADINI'">
                 </div>
                 <div class="product-info">
                     <div class="product-category">${product.category.toUpperCase()}</div>
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         content.innerHTML = `
             <div class="modal-grid">
-                <img src="${product.img}" alt="${product.name}">
+                <img src="${product.img}" alt="${product.name}" loading="eager" decoding="async">
                 <div>
                     <span class="subtitle">${product.category.toUpperCase()}</span>
                     <h3 style="font-size: 1.4rem; margin: 0.3rem 0 0.8rem 0;">${product.name}</h3>
