@@ -8,8 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .customization-page {
+            isolation: isolate;
+        }
+
+        .customization-page::before,
+        .customization-page::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .customization-page::before {
+            z-index: -2;
+            background: url("assets/visao loja.jpeg") center / cover no-repeat;
+        }
+
+        .customization-page::after {
+            z-index: -1;
+            background: rgba(8, 10, 14, 0.68);
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(7px);
+        }
+
+        .customization-page .glass-card {
+            background: rgba(20, 20, 25, 0.78);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
 </head>
-<body>
+<body class="customization-page">
     <header class="navbar glass">
         <div class="nav-container">
             <a href="index.html" class="logo">
