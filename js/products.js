@@ -45,7 +45,7 @@ const PRODUCTS = [
         name: "Camisa Praia",
         price: 119.90,
         category: "camisas",
-        img: "assets/Camisa havaiana.jpeg",
+        img: "assets/camisa havaiana.jpeg",
         desc: "Camisa de estilo praiano, indicada para compor looks leves e descontraídos."
     },
     {
