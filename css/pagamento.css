@@ -1,0 +1,24 @@
+/* Fundo fixo da página de pagamento, seguindo o vidro escuro das demais páginas. */
+.payment-page {
+    isolation: isolate;
+}
+
+.payment-page::before,
+.payment-page::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.payment-page::before {
+    z-index: -2;
+    background: url("../assets/visao loja.jpeg") center / cover no-repeat;
+}
+
+.payment-page::after {
+    z-index: -1;
+    background: rgba(8, 10, 14, 0.68);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
