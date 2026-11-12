@@ -1,0 +1,38 @@
+/* Fundo estático exclusivo da página do carrinho. */
+.cart-page {
+    isolation: isolate;
+}
+
+.cart-page::before,
+.cart-page::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.cart-page::before {
+    z-index: -2;
+    background: url("../assets/visao loja.jpeg") center / cover no-repeat;
+}
+
+.cart-page::after {
+    z-index: -1;
+    background: rgba(8, 10, 14, 0.68);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+/* Deixa os cartões translúcidos para revelar o fundo sem prejudicar a leitura. */
+.cart-page .cart-page-item,
+.cart-page .cart-summary-card {
+    background: rgba(20, 20, 25, 0.76);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.cart-page .footer-contacts {
+    background: rgba(20, 20, 25, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
