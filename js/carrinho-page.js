@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = '';
 
         if (cart.length === 0) {
-            container.innerHTML = '<div class="glass-card text-center"><p>Seu carrinho está vazio.</p><a href="loja.html" class="btn-primary mt-3">Ir para a Loja</a></div>';
+            container.innerHTML = '<div class="glass-card text-center"><p>Seu carrinho está vazio.</p><a href="index.html" class="btn-primary mt-3">Ir para a Loja</a></div>';
             subtotalEl.innerText = formatCurrency(0);
             totalEl.innerText = formatCurrency(0);
             payBtn.style.display = 'none';
